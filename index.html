@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&family=Signika+Negative:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+
+        <header>
+            <div class="banner">
+                <img src="assets/images/banner.webp" alt="">
+            </div>
+            <div class="profile-image">
+                <img src="assets/images/profile.png">
+            </div>
+            <div class="stats">
+                <div class="profile-follows">
+                    <div class="posts"><h3>10 Posts</h3></div>
+                    <div class="followers"><h3>500 Followers</h3></div>
+                    <div class="following"><h3>100 Following</h3></div>
+                </div>
+                
+                <div class="bio">
+                </div>
+    
+            </div>
+        </header>
+        <div class="nav">
+            <button  onclick="active_section('home')">HOME</button>
+            <button  onclick="active_section('about')">ABOUT</button>
+            <button  onclick="active_section('projects')">PROJECTS</button>
+            <button  onclick="active_section('contact')">CONTACT</button>
+        </div>
+        <div class="content-container">
+            <div class="content" id="home">
+                <div class="content-cards">
+                    <div class="content-card"></div>
+                    <div class="content-card"></div>
+                    <div class="content-card"></div>
+                    <div class="content-card"></div>
+                    <div class="content-card"></div>
+                    <div class="content-card"></div>
+                </div>
+            </div>
+            <div class="content" id="about"></div>
+            <div class="content" id="projects"></div>
+            <div class="content" id="contact"></div>
+        </div>
+    </main>
+
+
+    <script src="assets/javascript/nav.js"></script>
+</body>
+</html>
