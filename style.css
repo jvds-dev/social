@@ -2,7 +2,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Signika Negative', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    transition: opacity .7s ease, background .5s ease, color .5s ease;
+}
+
+:root{
+    --light-bg: #cfcfcf;
+    --light-text: #050505;
+    --light-main: #ffffff;
+    --light-content: #cfcfcf;
+
+    --dark-bg: #000;
+    --dark-main: #050505;
+    --dark-content: #101010;
+    --dark-text: #efefef;
+
+    --bg-color: var(--light-bg);
+    --main-color: var(--light-main);
+    --content-color: var(--light-content);
+    --text-color: var(--light-text);
+    --hl-color: #0077ff;
+    
+    --bg-dark: #000812;
+    --shadow-default: 0 6px 8px #00000055;
 }
 
 body{
@@ -10,25 +32,28 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center ;
-    background: #00090a;
+    background: var(--bg-color);
 }
 
 main{
     width: 80%;
     max-width: 1000px;
+    margin-top: 50px;
+    /* height: 100%; */
 }
 
 
 header{
-    background: #001517;
+    background: var(--main-color);
     padding: 50px;
     display: flex;
     gap: 20px;
-    border-radius: 20px;
+    /* border-radius: 50px; */
     position: relative;
     overflow: hidden;
     justify-content: center;
     align-items: center;
+    box-shadow: var(--shadow-default);
 }
 
 .banner{
@@ -60,11 +85,43 @@ header{
     /* overflow: hidden; */
     /* background: #000; */
     z-index: 1;
+    position: relative;
 }
 .profile-image img{
     border-radius: 50%;
     width: 200px;
     height: 200px;
+}
+.profile-image::after{
+    content: '@ Jvds-dev';
+    position: absolute;
+    color: var(--text-color);
+    /* color: aqua; */
+    z-index: 10;
+    /* background: red; */
+    bottom: 0;
+    right: 0;
+    font-size: 22px;
+    font-weight: bolder;
+    /* transform: translate3d(-50px, 35px, 0); */
+    transform: translate3d(130px, -30px, 0);
+}
+
+.bio{
+    position: absolute;
+    z-index: 1;
+    /* background: red; */
+    bottom: 0;
+    left: 0;
+    transform: translate3d(290px, -50px, 0);
+    /* font-weight: lighter; */
+}
+.bio p{
+    /* position: absolute; */
+    color: var(--text-color);
+    top: 0;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .stats{
@@ -87,27 +144,31 @@ header{
 }
 
 .nav{
-    background: #001517;
+    background: var(--main-color);
     padding: 15px;
     margin-top: 10px;
-    border-radius: 50px;
+    border-radius:10px;
     display: flex;
     gap: 20px;
     width: 100%;
     align-items: center;
     justify-content: center;
+    box-shadow: var(--shadow-default);
 }
 .nav button{
     /* text-decoration: none; */
     background: transparent;
     border: none;
-    color: #fff;
+    color: var(--text-color);
     cursor: pointer;
+    font-weight: bolder;
+    font-size: 20px;
 }
 
 .content-container{
     background: red;
     position: relative;
+    height: 100%;
 }
 /* #home{
     background: red;
@@ -124,14 +185,16 @@ header{
 #home, #about, #projects, #contact{
     position: absolute;
     width: 100%;
-    height: 800px;
-    background: #001517;
+    /* height: 800px; */
+    min-height: 800px;
+    background: var(--main-color);
     margin-top: 10px;
-    border-radius: 20px;
+    border-radius: 10px;
     top: 0;
     left: 0;
     opacity: 0;
-    transition: all .7s ease;
+    /* transition: opacity .1s ease, background .5s ease; */
+    box-shadow: var(--shadow-default);
 }
 #home.visible,
 #about.visible,
@@ -158,6 +221,31 @@ header{
 #home .content-card{
     width: 400px;
     height: 200px;
-    background: #012225;
+    background: var(--content-color);
+    box-shadow: var(--shadow-default);
     border-radius: 20px;
+}
+
+
+.side-bar{
+    position: fixed;
+    right: 20px;
+    /* top: 50%; */
+    bottom: 20px;
+}
+.side-bar button{
+    background: var(--main-color);
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    color: var(--text-color);
+    font-size: 30px;
+    box-shadow: var(--shadow-default);
+    cursor: pointer;
+}
+
+footer{
+    width: 100%;
+    height: 80px;
 }

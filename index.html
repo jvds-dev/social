@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&family=Signika+Negative:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/9b5dcfea76.js" crossorigin="anonymous"></script>
+
+    
 </head>
 <body>
     <main>
@@ -22,13 +26,12 @@
             <div class="stats">
                 <div class="profile-follows">
                     <div class="posts"><h3>10 Posts</h3></div>
-                    <div class="followers"><h3>500 Followers</h3></div>
-                    <div class="following"><h3>100 Following</h3></div>
+                    <div class="followers"><h3>20 Repos</h3></div>
+                    <div class="following"><h3>100 Followers</h3></div>
                 </div>
-                
-                <div class="bio">
-                </div>
-    
+            </div>
+            <div class="bio">
+                <p>Descrição</p>
             </div>
         </header>
         <div class="nav">
@@ -38,7 +41,7 @@
             <button  onclick="active_section('contact')">CONTACT</button>
         </div>
         <div class="content-container">
-            <div class="content" id="home">
+            <div class="content visible" id="home">
                 <div class="content-cards">
                     <div class="content-card"></div>
                     <div class="content-card"></div>
@@ -54,7 +57,14 @@
         </div>
     </main>
 
+    <div class="side-bar">
+        <button id="theme-button"><i class="fa-solid fa-circle-half-stroke"></i></button>
+    </div>
 
+    <footer>
+
+    </footer>
     <script src="assets/javascript/nav.js"></script>
+    <script src="assets/javascript/theme.js"></script>
 </body>
 </html>
